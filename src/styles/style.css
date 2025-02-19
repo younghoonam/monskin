@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Lilita+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shippori+Antique+B1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+html {
+  --container-inline-padding: 1.5rem;
+}
+
+body {
+  margin: 0;
+  /* overflow: hidden; */
+  color: #222;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  /* pointer-events: none; */
+
+  overflow-x: hidden;
+
+  background-color: #cac6c5;
+}
+
+.snap-container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  pointer-events: all;
+}
+
+#cardCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.lil-gui {
+  pointer-events: all;
+}
+
+.container {
+  padding-inline: clamp(
+    var(--container-inline-padding),
+    calc(30vw - 10rem),
+    50rem
+  );
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: clamp(3rem, 10vw, 8rem);
+  text-align: center;
+  font-weight: 800;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 1000;
+
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 900;
+
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: keep-all;
+
+  margin-top: 0.5rem;
+}
+.footer {
+}
+.left {
+  text-align: left;
+}
+.right {
+  margin-inline: auto 0;
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+
+.key-point {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh; /* Set the height of the container */
+}
+
+.description {
+  max-width: 17rem;
+}
+.cover {
+  height: 300vh;
+
+  padding-top: 8rem;
+}
+
+.snap-section {
+  /* scroll-snap-align: start end; */
+}
+
+.width-max {
+  max-width: 20rem;
+}
+
+.shades {
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 6rem auto 70%;
+  justify-items: center;
+}
+
+.shades-title {
+}
+
+.side-scroll {
+  padding-bottom: 2rem;
+  width: 100vw;
+
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.shade-card {
+  flex: 0 0 auto;
+  scroll-snap-type: center center;
+
+  margin-left: 1rem;
+  width: clamp(20rem, 60vw, 25rem);
+  border-radius: 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+
+  --shade-card-title-size: 1.1rem;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70% calc(var(--shade-card-title-size) + 0.8rem) auto;
+  justify-items: center;
+}
+
+.shade-canvas {
+  /* background-color: #222; */
+
+  width: 100%;
+}
+
+.shade-card-title {
+  font-size: var(--shade-card-title-size);
+  font-weight: 800;
+  text-align: center;
+}
+
+.shade-card-description {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-wrap: wrap;
+  max-width: 60%;
+}
+
+.lineup {
+  height: 100vh;
+
+  margin-top: 15rem;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 8rem auto;
+  justify-items: center;
+}
+.lineup-card {
+  flex: 0 0 auto;
+  scroll-snap-type: center center;
+
+  padding-bottom: 2rem;
+
+  margin-left: 1rem;
+  width: clamp(20rem, 85vw, 25rem);
+  border-radius: 3rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+
+  --lineup-card-title-size: 1.5rem;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 65% calc(var(--lineup-card-title-size) + 2rem) auto;
+  justify-items: center;
+}
+
+.lineup-canvas {
+  /* background-color: #222; */
+
+  width: 100%;
+}
+
+.lineup-card-title {
+  font-size: var(--lineup-card-title-size);
+  font-weight: 800;
+}
+
+.lineup-card-table {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 35% 35%;
+  grid-template-rows: repeat(5, 20%);
+
+  justify-content: center;
+
+  font-weight: 500;
+}
+
+.lineup-card-item {
+}
+
+.lineup-card-content {
+  text-align: center;
+}
+
+.title {
+  position: relative;
+
+  height: 100vh;
+
+  text-align: center;
+
+  margin-bottom: 1rem;
+}
+
+.title-text {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.5rem;
+  margin: 0;
+  text-align: center;
+  margin-inline: auto;
+
+  padding-top: 5rem;
+}
+
+.title-bottom {
+  position: absolute;
+  bottom: 0; /* Positions the child at the bottom of the parent */
+  left: 0; /* Optionally align it to the left */
+  width: 100%; /* Optional: full width */
+
+  padding-bottom: 5rem;
+}
+
+.reviews {
+  height: 300vh;
+  /* padding-top: 3rem; */
+}
+
+.reviews-title {
+  text-align: center;
+  margin-top: 0;
+}
+
+.reviews-subtitle {
+  padding-top: 2rem;
+}
+
+.review-card {
+  width: clamp(10rem, 60vw, 20rem);
+  padding-block: 1.5rem;
+  padding-inline: 1.8rem;
+
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border-radius: 2rem;
+  margin-block: 10rem;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.review-name {
+  margin-top: 1rem;
+}
+
+.star-container {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+}

@@ -1,0 +1,22 @@
+{
+  "positionPoints": [
+    { "x": 0, "y": 0, "z": 0 ,"keyframe": true},
+    { "x": 0, "y": 0, "z": 1 },
+    { "x": 0, "y": 0, "z": 2 ,"keyframe": true },
+    { "x": -1, "y": 0, "z": 0.8 ,"keyframe": true },
+    { "x": -1, "y": 0, "z": 0.8 ,"keyframe": true },
+    { "x": 0, "y": 0, "z": 0.8 ,"keyframe": true },
+    { "x": 0, "y": 0, "z": 0 ,"keyframe": true }
+  ],
+  "quaternionPoints": [
+    { "x": 0.785, "y": 0, "z": 0 , "w": 0,"keyframe": true},
+    { "x": 4.28, "y": 5.28, "z": 3.28 , "w": 0,"keyframe": true},
+    { "x": 6.28, "y": 6.28, "z": 6.28 , "w": 0,"keyframe": true},
+    { "x": 6.28, "y": 6.28, "z": 6.28 , "w": 0,"keyframe": true},
+    { "x": 0.785, "y": 6.28, "z": 6.28 , "w": 0,"keyframe": true},
+    { "x": 0.785, "y": 17, "z": 6.28 , "w": 0,"keyframe": false},
+    { "x": 0.785, "y": 9.42, "z": 6.28 , "w": 0,"keyframe": true}
+  ]
+}
+
+

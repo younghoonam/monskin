@@ -1,0 +1,120 @@
+/* Small Vertical Margins */
+.margin-vertical-small {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Medium Vertical Margins */
+.margin-vertical-medium {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Large Vertical Margins */
+.margin-vertical-large {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Extra Large Vertical Margins */
+.margin-vertical-xlarge {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Extra Small Vertical Margins */
+.margin-vertical-xs {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+/* HTML: <div class="star"></div> */
+.star {
+  display: inline-block; /* Aligns the stars horizontally */
+  width: 1.2rem;
+  aspect-ratio: 1;
+  background: #222;
+
+  clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+}
+
+.font-size-08 {
+  font-size: 0.8rem;
+}
+
+.font-size-1 {
+  font-size: 1rem;
+}
+
+.font-size-1-2 {
+  font-size: 1.2rem;
+}
+
+.font-size-1-5 {
+  font-size: 1.5rem;
+}
+
+.font-size-1-75 {
+  font-size: 1.75rem;
+}
+
+.font-size-2 {
+  font-size: 2rem;
+}
+
+.font-size-2-5 {
+  font-size: 2.5rem;
+}
+
+.font-size-3 {
+  font-size: 3rem;
+}
+
+.font-weight-100 {
+  font-weight: 100;
+}
+
+.font-weight-200 {
+  font-weight: 200;
+}
+
+.font-weight-300 {
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.font-weight-800 {
+  font-weight: 800;
+}
+
+.font-weight-900 {
+  font-weight: 900;
+}
+
+.pill {
+  display: inline-block;
+  --width: 0.6rem;
+  width: var(--width);
+  height: calc(var(--width) * 2.5);
+  background-color: #ccc;
+  border-radius: calc(var(--width) / 2);
+  margin-inline-start: 0.1rem;
+}
+
+.pill-fill {
+  background-color: #666;
+}

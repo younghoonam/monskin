@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="src/styles/util.css" />
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <title>Monskin - Younghoo Nam</title>
+  </head>
+  <body>
+    <div class="container snap-container keyframe">
+      <div class="title snap-section">
+        <h1 class="title-text">MONSKIN</h1>
+
+        <div class="title-bottom">
+          <div class="font-size-1-75 font-weight-800">
+            몬스킨 매트 스킨 쿠션
+          </div>
+          <div class="font-size-1-2 font-weight-500 margin-vertical-small">
+            자연 그대로의 아름다움
+          </div>
+          <div class="font-size-1 font-weight-500">
+            지속 커버력 / 가벼운 텍스쳐 / SPF 35
+          </div>
+        </div>
+      </div>
+
+      <div class="cover snap-section">
+        <h2>자연스러운 커버력,<br />당신 그대로의 아름다움</h2>
+        <p class="description">
+          모든 피부 톤과 타입에 완벽하게 블렌딩되는 쿠션 파운데이션을 경험해
+          보세요
+        </p>
+      </div>
+
+      <div class="cover" id="openAnimation"></div>
+
+      <div class="key-point snap-section keyframe right">
+        <div>
+          <div>POINT 1.</div>
+          <h3>자연스러운 지속 커버력</h3>
+          <p class="description right">
+            하루 종일 자연스럽게 피부 결점을 커버하며 매끄러운 피부 표현
+          </p>
+        </div>
+      </div>
+
+      <div class="key-point snap-section keyframe">
+        <div>
+          <div>POINT 2.</div>
+          <h3>수분감 있고 가벼운 텍스처</h3>
+          <p class="description">
+            답답함 없이 가벼운 사용감을 제공하면서도 피부 속부터 촉촉하게
+          </p>
+        </div>
+      </div>
+
+      <div class="key-point snap-section keyframe right">
+        <div>
+          <div>POINT 3.</div>
+          <h3>자외선 차단 기능</h3>
+          <p class="description right">
+            SPF 포함으로 자외선으로부터 피부를 보호하며 건강한 피부
+          </p>
+        </div>
+      </div>
+
+      <div class="reviews snap-section keyframe">
+        <div class="font-size-1-2 font-weight-600 center reviews-subtitle">
+          생생한 리뷰가 증명하는
+        </div>
+        <h2 class="reviews-title">몬스킨 커버력 시스템</h2>
+        <div class="review-card">
+          <div>
+            "드디어 나의 피부톤에 딱 맞는 쿠션 파운데이션을 찾았어요! 자연스러운
+            마무리가 정말 좋아요"
+          </div>
+          <div class="review-name">- Yuna K.</div>
+          <div class="star-container">★★★★★</div>
+        </div>
+        <div class="review-card right">
+          <div>"피부에 가볍게 느껴지고, 커버력이 정말 좋아요!"</div>
+
+          <div class="review-name">- Jihoon L.</div>
+          <div class="star-container">★★★★★</div>
+        </div>
+        <div class="review-card">
+          <div>
+            "피부가 민감한 편인데, 이 쿠션은 정말 자극 없이 부드럽게 발려요.
+            피부톤에 맞춰 자연스럽게 커버되는 점이 특히 마음에 듭니다"
+          </div>
+          <div class="review-name">- Mira S.</div>
+          <div class="star-container">★★★★★</div>
+        </div>
+        <div class="review-card right">
+          <div>
+            "파운데이션의 밀착력이 뛰어나서 마스크에 잘 묻어나지 않아요! 피부가
+            하루 종일 산뜻하게 유지됩니다"
+          </div>
+
+          <div class="review-name">- Hana C.</div>
+          <div class="star-container">★★★★★</div>
+        </div>
+        <div class="review-card">
+          <div>
+            "매일 쓰기에도 부담이 없는 가벼운 질감이에요. 촉촉하고 답답하지
+            않아서 만족스러워요"
+          </div>
+          <div class="review-name">- Minji P.</div>
+          <div class="star-container">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="shades snap-section keyframe">
+        <h2 class="center shades-title">10가지 피부톤에 맞춘 컬러</h2>
+        <p class="center">
+          밝은 톤부터 깊은 톤까지, MONSKIN은 당신의 피부톤에 완벽히 맞추기 위해
+          제작되었습니다
+        </p>
+        <div class="side-scroll" id="shadeCardContainer"></div>
+        <!-- <div class="side-scroll"></div> -->
+      </div>
+
+      <div class="lineup snap-section">
+        <h2 class="center shades-title">MONSKIN의 전체 컬렉션을 만나보세요</h2>
+        <div class="side-scroll" id="lineupCardContainer"></div>
+        <!-- <div class="side-scroll"></div> -->
+      </div>
+
+      <div class="footer"></div>
+    </div>
+    <canvas id="cardCanvas"></canvas>
+    <canvas id="canvas"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script type="module" src="src/scripts/gsapScript.js"></script>
+    <script type="module" src="src/scripts/script.js"></script>
+    <script type="module" src="src/scripts/shadeCards.js"></script>
+    <script type="module" src="src/scripts/lineupCards.js"></script>
+  </body>
+</html>
